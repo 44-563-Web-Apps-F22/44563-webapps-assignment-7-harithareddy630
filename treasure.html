@@ -102,7 +102,7 @@
     function check(position) {
         image = document.getElementById(ids[position])
         if(position == treasureLocation) {
-            image.src = "Full Treasure.jpg" 
+            image.src = "Full Treasure.jpg"   
         } else {
             image.src = "Empty Treasure Chest.jpg"
         }
@@ -114,24 +114,24 @@
     }
 
     function help() {
-        LastChecked_row = parseInt(lastCheck / 5)
-        LastChecked_column = parseInt(lastCheck % 5)
-        TreasureLoc_row = parseInt(treasureLocation / 5)
-        TreasureLoc_column = parseInt(treasureLocation % 5)
+        lastChecked_row = parseInt(lastCheck / 5)
+        lastChecked_column = parseInt(lastCheck % 5)
+        treasureLoc_row = parseInt(treasureLocation / 5)
+        treasureLoc_column = parseInt(treasureLocation % 5)
         score += 2
         document.getElementById("score").innerHTML = "Score is " + score
-        if(LastChecked_row == TreasureLoc_row) {
-            if(LastChecked_column < TreasureLoc_column) {
+        if(lastChecked_row == treasureLoc_row) {
+            if(lastChecked_column < treasureLoc_column) {
                 document.getElementById("help").innerHTML = "Right"
-            } else if(LastChecked_column > TreasureLoc_column) {
+            } else if(lastChecked_column > treasureLoc_column) {
                 document.getElementById("help").innerHTML = "Left"
             } else {
                 document.getElementById("help").innerHTML = "Sorry, no help available"
             }
-        } else if(LastChecked_column == TreasureLoc_column) {
-            if(LastChecked_row < TreasureLoc_row) {
+        } else if(lastChecked_column == treasureLoc_column) {
+            if(lastChecked_row < treasureLoc_row) {
                 document.getElementById("help").innerHTML = "Down"
-            } else if(LastChecked_row > TreasureLoc_row) {
+            } else if(lastChecked_row > treasureLoc_row) {
                 document.getElementById("help").innerHTML = "Up"   
             } else {
                 document.getElementById("help").innerHTML = "Sorry, no help available"
