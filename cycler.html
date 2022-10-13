@@ -19,9 +19,8 @@
             background-color: red;
         }
 
-        .flex-container>div {
-            /div children of the flex container/
-            background-color: #f1f1f1;
+        .flex-container > div {
+            background-color: #f1f1f1; ;
             margin: 10px;
             padding: 20px;
             font-size: 30px;
@@ -35,8 +34,8 @@
             }
         }
     </style>
-</head>
 
+</head>
 
 
 <body>
@@ -65,6 +64,7 @@
 			<button onclick="makeNewDiv()" class="btn btn-info" type="submit" >Add value</button>
 			<button onclick="get()" class="btn btn-primary" type="submit">Get</button>
 			<button onclick="spin()" class="btn btn-secondary" type="submit">Spin</button>
+			<button onclick="swap()" type="submit" class="btn btn-info">Swap</button> 
 			
 		</div>
 		<script>
@@ -106,8 +106,14 @@
                     secondInnerText.innerHTML = change
                 }
             } 
-    </script>
+    </script>  
+
+<div class="container">
+    <ul class="pager">
+        <li class="previous">
+            <a href="reaction.html">Reaction Timer</a>
+        </li>
+    </ul>
+</div>
 </body>
-
-
-</html>
+</html>	 
