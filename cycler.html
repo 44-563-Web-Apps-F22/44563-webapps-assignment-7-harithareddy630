@@ -92,9 +92,22 @@
 					val.insertBefore(removedItem, val.firstChild)
 				}
 			} 
-			
-		</script>    
-	</body>
-	
-	
-	</html>
+
+			function swap() {
+                let cyclerItems = document.getElementsByClassName("cycler")
+                let container = document.getElementById("target")
+                let variable = Math.floor(Math.random() * cyclerItems.length)
+                let value = Math.floor(Math.random() * cyclerItems.length)
+                let firstInnerText = document.getElementsByClassName("cycler")[variable]
+                let secondInnerText = document.getElementsByClassName("cycler")[value]
+                if(cyclerItems.length > 1) {
+                    let change = firstInnerText.innerHTML
+                    firstInnerText.innerHTML = secondInnerText.innerHTML
+                    secondInnerText.innerHTML = change
+                }
+            } 
+    </script>
+</body>
+
+
+</html>
