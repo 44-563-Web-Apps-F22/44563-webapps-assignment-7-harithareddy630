@@ -103,7 +103,7 @@
     var chestCount = 0
     var score = 0
     var lastCheck = 12
-    var treasureLocation = 18   
+    var treasureLocation = Math.floor(Math.random() * 24)  
 
     function check(position) {
         image = document.getElementById(ids[position])
@@ -168,7 +168,7 @@ function resetGame() {
 <div class="container">
     <ul class="pager">
         <li class="next">
-            <a href="reaction.html">Reaction Timer</a>
+            <a href="reaction.html">Reaction Timer</a> 
         </li>
     </ul>
 </div>
